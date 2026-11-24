@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .login {
+            background-color: white;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+
+        <h2>Login Page</h2>
+
+        <input type="text" id="email"
+        placeholder="Enter Email">
+
+        <input type="password" id="password"
+        placeholder="Enter Password">
+
+        <br><br>
+
+        <button onclick="login()">Login</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+        function login() {
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (email == "admin@gmail.com" && password == "12345") {
+
+                document.getElementById("result").innerHTML =
+                "Login Successful!";
+
+                document.getElementById("result").style.color = "green";
+
+            } else {
+
+                document.getElementById("result").innerHTML =
+                "Invalid Email or Password!";
+
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
